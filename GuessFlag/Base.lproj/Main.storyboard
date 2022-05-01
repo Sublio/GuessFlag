@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cL5-IK-TCe">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,58 +13,77 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessFlag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Ad-bGG">
-                                <rect key="frame" x="194" y="101" width="200" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Ad-bGG">
+                                <rect key="frame" x="95" y="56" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us" imagePadding="0.0"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmK-Zb-gzb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGg-kQ-9RC">
-                                <rect key="frame" x="194" y="227" width="200" height="100"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-Ip-L2O">
+                                <rect key="frame" x="95" y="344" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LvQ-NX-iXt"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-Ip-L2O">
-                                <rect key="frame" x="194" y="361" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGg-kQ-9RC">
+                                <rect key="frame" x="95" y="200" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBZ-th-O5H"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gGg-kQ-9RC" firstAttribute="top" secondItem="NDj-Ad-bGG" secondAttribute="bottom" constant="26" id="JQp-mE-e0I"/>
-                            <constraint firstItem="NDj-Ad-bGG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Oin-DN-b8C"/>
-                            <constraint firstItem="NDj-Ad-bGG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="TwA-mU-IQR"/>
-                            <constraint firstItem="gGg-kQ-9RC" firstAttribute="centerX" secondItem="NDj-Ad-bGG" secondAttribute="centerX" id="c98-p9-cV3"/>
+                            <constraint firstItem="caN-Ip-L2O" firstAttribute="centerX" secondItem="gGg-kQ-9RC" secondAttribute="centerX" id="082-Sf-G5k"/>
+                            <constraint firstItem="gGg-kQ-9RC" firstAttribute="top" secondItem="NDj-Ad-bGG" secondAttribute="bottom" constant="30" id="5cT-qQ-88c"/>
+                            <constraint firstItem="caN-Ip-L2O" firstAttribute="top" secondItem="gGg-kQ-9RC" secondAttribute="bottom" constant="30" id="EnI-Xc-agn"/>
+                            <constraint firstItem="NDj-Ad-bGG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Y5Q-Np-wWf"/>
+                            <constraint firstItem="gGg-kQ-9RC" firstAttribute="centerX" secondItem="NDj-Ad-bGG" secondAttribute="centerX" id="a1o-Dt-cgn"/>
+                            <constraint firstItem="NDj-Ad-bGG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="cZF-vR-aTZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sfh-9Y-Rzo"/>
+                    <connections>
+                        <outlet property="button1" destination="NDj-Ad-bGG" id="IqF-xX-YbX"/>
+                        <outlet property="button2" destination="gGg-kQ-9RC" id="76n-Q6-nDM"/>
+                        <outlet property="button3" destination="caN-Ip-L2O" id="r77-Mf-siq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="108.48214285714285"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Guess Flag-->
         <scene sceneID="9hX-ho-R0f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cL5-IK-TCe" sceneMemberID="viewController">
+                <navigationController title="Guess Flag" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="cL5-IK-TCe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kbf-aM-jQI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QMf-rU-r6W">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qfL-Ow-1Wc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01M-51-dGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="108.48214285714285"/>
+            <point key="canvasLocation" x="183" y="108"/>
         </scene>
     </scenes>
     <resources>
