@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var askedQuestions = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +32,17 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
 
         askQuestion(action: nil)
-
     }
 
     func askQuestion(action: UIAlertAction!) {
         countries.shuffle()
+        askedQuestions += 1
         correctAnswer = Int.random(in: 0...2)
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
 
-        title = countries[correctAnswer].uppercased()
+        title = countries[correctAnswer].uppercased() + "  Your score is \(score)"
 
     }
 
@@ -52,14 +53,21 @@ class ViewController: UIViewController {
             title = "Correct"
             score += 1
         } else {
-            title = "Wrong"
+            title = "Wrong answer. You have selected \(countries[sender.tag]) but that was \(countries[correctAnswer])"
             score -= 1
 
         }
 
-        let ac = UIAlertController(title: title, message: "You score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
-
+        if askedQuestions == 10 {
+            title = "your final score is \(score)"
+            let ac = UIAlertController(title: "Final", message: title, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+            score = 0
+        } else {
+            let ac = UIAlertController(title: nil, message: title, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+        }
     }
 }
