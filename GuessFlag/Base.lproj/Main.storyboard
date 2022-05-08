@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Ad-bGG">
                                 <rect key="frame" x="95" y="56" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NDj-Ad-bGG" secondAttribute="height" multiplier="112:57" id="On4-r6-BbM"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us" imagePadding="0.0"/>
                                 <connections>
@@ -26,6 +29,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-Ip-L2O">
                                 <rect key="frame" x="95" y="344" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="caN-Ip-L2O" secondAttribute="height" multiplier="112:57" id="EHl-MV-mmq"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
                                 <connections>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGg-kQ-9RC">
                                 <rect key="frame" x="95" y="200" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gGg-kQ-9RC" secondAttribute="height" multiplier="112:57" id="xal-Dw-rVZ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
                                 <connections>
@@ -47,9 +56,12 @@
                             <constraint firstItem="caN-Ip-L2O" firstAttribute="centerX" secondItem="gGg-kQ-9RC" secondAttribute="centerX" id="082-Sf-G5k"/>
                             <constraint firstItem="gGg-kQ-9RC" firstAttribute="top" secondItem="NDj-Ad-bGG" secondAttribute="bottom" constant="30" id="5cT-qQ-88c"/>
                             <constraint firstItem="caN-Ip-L2O" firstAttribute="top" secondItem="gGg-kQ-9RC" secondAttribute="bottom" constant="30" id="EnI-Xc-agn"/>
+                            <constraint firstItem="gGg-kQ-9RC" firstAttribute="height" secondItem="NDj-Ad-bGG" secondAttribute="height" id="NG0-LJ-IzV"/>
+                            <constraint firstItem="caN-Ip-L2O" firstAttribute="height" secondItem="gGg-kQ-9RC" secondAttribute="height" id="SOQ-ai-pto"/>
                             <constraint firstItem="NDj-Ad-bGG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Y5Q-Np-wWf"/>
                             <constraint firstItem="gGg-kQ-9RC" firstAttribute="centerX" secondItem="NDj-Ad-bGG" secondAttribute="centerX" id="a1o-Dt-cgn"/>
                             <constraint firstItem="NDj-Ad-bGG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="cZF-vR-aTZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="caN-Ip-L2O" secondAttribute="bottom" constant="20" id="dNr-06-6cO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sfh-9Y-Rzo"/>
