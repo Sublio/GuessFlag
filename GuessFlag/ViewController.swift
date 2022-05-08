@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
         button3.layer.borderWidth = 1
+        button1.layer.masksToBounds = true
+        button2.layer.masksToBounds = true
+        button3.layer.masksToBounds = true
 
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
@@ -79,5 +82,4 @@ class ViewController: UIViewController {
         present(alertVc, animated: true)
     }
     
-    didCha
 }
